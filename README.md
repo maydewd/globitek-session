@@ -43,7 +43,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 * In order to complete the set_secret_cookie advanced story, I had to download the mcrypt php plugin (sudo apt-get install php7.0-mcrypt). You may need to download it as well, if you haven't already.
 * In login.php, I included separate error messages for an incorrect username vs an incorrect password, since it was explicitly noted in the requirements. In production, however, this decision would come down to the decision to prioritize security or user experience.
 * In request_is_same_domain in functions.php I changed HOST_NAME to SERVER_NAME because the former included the 8080 port when accessing localhost (which doesn't appear in HTTP_REFERER).
-* When I was testing the site on different browsers, I discovered a bug on the pen_tests pages when using firefox. The <script> tag would always load before the <iframe> tag (see [here](http://stackoverflow.com/questions/8996852/load-and-execute-order-of-scripts)) causing the page to infinitely reload. I included a slight modification to these pages that prevents this, as well as prevents the initial undefined error from the $msg variable. 
+* When I was testing the site on different browsers, I discovered a bug on the pen_tests pages when using firefox. The < script> tag would always load before the < iframe> tag (see [here](http://stackoverflow.com/questions/8996852/load-and-execute-order-of-scripts)) causing the page to infinitely reload. I included a slight modification to these pages that prevents this, as well as prevents the initial undefined error from the $msg variable. 
 
 ## License
 
